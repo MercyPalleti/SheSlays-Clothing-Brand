@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../../models/User");
-
+const { sendSignupWebhook } = require("../../helpers/n8n-webhook");
 //register
 const registerUser = async (req, res) => {
   const { userName, email, password } = req.body;
@@ -22,6 +22,10 @@ const registerUser = async (req, res) => {
     });
 
     await newUser.save();
+
+    // Fire webhook (non-blocking)
+    sendSignupWebhook(newUser);
+
     res.status(200).json({
       success: true,
       message: "Registration successful",
