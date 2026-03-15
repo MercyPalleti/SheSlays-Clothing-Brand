@@ -36,9 +36,9 @@ const bannerImages = [bannerOne, bannerTwo, bannerThree];
 
 /* ---------------- CATEGORY ICONS ---------------- */
 const categoriesWithIcon = [
-  { id: "men", label: "Men", icon: ShirtIcon },
-  { id: "women", label: "Women", icon: CloudLightning },
-  { id: "kids", label: "Kids", icon: BabyIcon },
+  { id: "casual_wear", label: "Casual Wear", icon: ShirtIcon },
+  { id: "western_wear", label: "Western Wear", icon: CloudLightning },
+  { id: "traditional_wear", label: "Traditional Wear", icon: Heater },
   { id: "accessories", label: "Accessories", icon: WatchIcon },
   { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
 ];
